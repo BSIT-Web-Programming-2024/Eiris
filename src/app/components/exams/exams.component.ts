@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { BaseService } from '../../core/services/base.service';
 
 @Component({
   selector: 'app-exams',
@@ -7,6 +8,17 @@ import { Component } from '@angular/core';
   templateUrl: './exams.component.html',
   styleUrl: './exams.component.scss'
 })
-export class ExamsComponent {
+export class ExamsComponent implements OnInit {
+  exams: any | null   = []
 
+  baseService = inject(BaseService)
+
+
+  ngOnInit(): void {
+   
+    this.baseService.getMyExams().then((exams) => {
+      this.exams = exams
+    })
+   
+  }
 }

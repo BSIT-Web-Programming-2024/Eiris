@@ -1,1 +1,11 @@
-<p>exams works!</p>
+<h1>My Exams</h1>
+
+
+@for(exam of exams; track exam) {
+ <div class="border p-3">
+  <h1>Name: {{exam.exam.details.name}}</h1>
+  <h1>Period: {{exam.exam.period.name}}</h1>
+  <h1>Score: {{exam.score}}</h1>
+  <h1>Total: {{ exam.exam.total}}</h1>
+ </div>
+}
