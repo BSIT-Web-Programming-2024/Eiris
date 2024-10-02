@@ -1,6 +1,6 @@
 # Eiris
 
-Iris was also one of the chief divine messengers of the gods, alongside Hermes. In early mythological literature, Iris carried the messages of the Olympians—especially Zeus—to other gods as well as to mortals.
+Iris was one of the chief divine messengers of the gods, alongside Hermes. In early mythological literature, Iris carried the messages of the Olympians—especially Zeus—to other gods as well as to mortals.
 
 Her name contains a double meaning, being connected with both the Greek word iris "the rainbow" and **eiris** "messenger."
 
