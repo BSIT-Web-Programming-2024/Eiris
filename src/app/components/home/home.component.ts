@@ -2,6 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { BaseService } from '../../core/services/base.service';
 import { JsonPipe } from '@angular/common';
+import { ClassService } from '../../core/services/class.service';
 
 @Component({
   selector: 'app-home',
@@ -12,12 +13,12 @@ import { JsonPipe } from '@angular/common';
 })
 export class HomeComponent implements OnInit {
   classes: any[] | null = []
-  baseService = inject(BaseService)
+  classService = inject(ClassService)
 
   ngOnInit() {
-    this.baseService.getMyClases().then((res : any) => {
+    this.classService.getMyClasses().then((res : any) => {
       this.classes = res
-      console.log('res:', res)
+      console.log('res my classes:', res)
     })
   }
 }

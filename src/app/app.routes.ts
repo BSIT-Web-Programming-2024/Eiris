@@ -10,6 +10,7 @@ import { QuizzesComponent } from './components/quizzes/quizzes.component';
 import { ClassesComponent } from './components/classes/classes.component';
 import { ClassComponent } from './components/class/class.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component'
+import { AttendanceComponent } from './pages/attendance/attendance.component';
 const dashboardRoutes = [
   { path: 'home', component: HomeComponent },
   {
@@ -40,6 +41,11 @@ const dashboardRoutes = [
 
     path: 'quizzes',
     component: QuizzesComponent
+  },
+  {
+
+    path: 'attendance/:id',
+    component: AttendanceComponent
   }
 ]
 

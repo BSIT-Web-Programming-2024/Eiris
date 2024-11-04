@@ -9,13 +9,6 @@ export class BaseService {
   student_id = 1
   supabase = createClient(environment.supabaseUrl, environment.supabaseKey)
 
-  sections = [
-    { title: 'Classes', link: 'classes' },
-    { title: 'Grades', link: 'grades' },
-    { title: 'Exams', link: 'exams' },
-    { title: 'Quizzes', link: 'quizzes' }
-  ]
-
   constructor() { }
 
   async getMySubjects() {
@@ -26,22 +19,10 @@ export class BaseService {
     return data
   }
 
-  async getMyClases() {
-    const { data, error } = await this.supabase.from('class_enrollees').select('* , classes( id , subject(id, name)) ').eq('student_id', this.student_id)
-
+  async getMyClasses() {
+    const { data, error } = await this.supabase.from('class_enrollees').select('* , classes( id , subject(name)) ').eq('student_id', this.student_id)
     return data
   }
-  
-
-  async getClass(id: string | null) {
-    const { data, error } = await this.supabase
-      .from('classes')
-      .select('*, subject(name), teacher(firstname, lastname)')
-      .eq('id', id).maybeSingle()
-
-    return data
-  }
-
 
   async getMyExams() {
     const { data, error } = await this.supabase

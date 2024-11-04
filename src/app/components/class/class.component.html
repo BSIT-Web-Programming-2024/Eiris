@@ -10,20 +10,19 @@
 <h1>Teacher: {{classDetails.teacher.firstname}} {{classDetails.teacher.lastname}}</h1>
 
 <div class="period  mt-4 border p-4 rounded-lg">
-  <h1 class="text-orange-500">Prelim</h1>
+  <h1 class="text-orange-500">Preliminary</h1>
   <div class="class_standings  mt-10 border p-8">
     <h1>Class Standings</h1>
    
   
-    <div class="quizzes mt-6 border p-6">
+    <div class="quizzes mt-6 border-2 p-6">
       <h2>Quizzes - {{ classQuizzes.length }}</h2>
-     
       @for(classQuiz of classQuizzes; track classQuiz) {
         <div class="quizzes-card ">
           <h3> {{ classQuiz.quizzes.name }}</h3>
           <div class="flex justify-between">
-            <p>Score:</p>
-            <p>Perfect Score: {{ classQuiz.total_score }}</p>
+            <p>My Score: </p>
+            <p class="font-bold">Total Score: {{ classQuiz.total_score }}</p>
           </div>
         </div>
       }

@@ -24,8 +24,8 @@ export class SubjectComponent implements OnInit {
    })
 
 
-   this.baseService.getMyClases().then(res => {
-    console.log('res get classes:", res', res)
-   })
+  //  this.baseService.getMyClases().then(res => {
+  //   console.log('res get classes:", res', res)
+  //  })
   }
 }

@@ -13,7 +13,7 @@ import {  CommonModule } from '@angular/common';
   styleUrl: './class.component.scss'
 })
 export class ClassComponent implements OnInit {
-  
+  studentId = 1
   baseService = inject(BaseService)
   router = inject(Router)
   route = inject(ActivatedRoute)
@@ -26,20 +26,37 @@ export class ClassComponent implements OnInit {
   ngOnInit(): void {
     console.log('class init')
     this.getClass()
-    this.getClassQuizzes()
   }
-
+  //  Todo: Slow Query
+  //  Map Quizzes to Students ID to get score.
    async getClass() {
     console.log('get class')
     this.loading = true
     const id = this.route.snapshot.paramMap.get('id')
-    this.classDetails = await this.baseService.getClass(id)
+    
+    this.classDetails = await this.classService.getClassDetails(Number(id))
+
+    console.log('class details:',this.classDetails)
+
+    if(!this.classDetails.id) return
 
    const data = await this.classService.getClassQuizzes(this.classDetails.id)
    console.log('data quiz:', data)
+
    this.classQuizzes = data || []
+
+
    console.log('class quizzes:', this.classQuizzes)
+
+
+   await this.getMyQuizzes(this.studentId)
     this.loading = false
+  }
+
+  async getMyQuizzes(studentId: number) {
+    const data = await this.classService.getMyQuizzes(this.classDetails.id, studentId)
+    console.log('student quizzes:', data)
+    return 
   }
 
   async getClassQuizzes() {
