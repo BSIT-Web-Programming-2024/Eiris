@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import  { AuthService } from '../../core/services/auth.service';
 
 @Component({
   selector: 'app-nav',
@@ -10,4 +11,10 @@ import { RouterModule } from '@angular/router';
 })
 export class NavComponent {
 
+  authService = inject(AuthService)
+
+  logout() {
+    this.authService.signOut()
+    console.log('redirect to login')  
+  }
 }

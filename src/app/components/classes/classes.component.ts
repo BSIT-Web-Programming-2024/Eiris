@@ -1,11 +1,12 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { BaseService } from '../../core/services/base.service';
 import { JsonPipe } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-classes',
   standalone: true,
-  imports: [JsonPipe],
+  imports: [RouterModule, JsonPipe,],
   templateUrl: './classes.component.html',
   styleUrl: './classes.component.scss'
 })

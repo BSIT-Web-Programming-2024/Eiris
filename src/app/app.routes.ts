@@ -8,13 +8,19 @@ import { GradesComponent } from './components/grades/grades.component';
 import { ExamsComponent } from './components/exams/exams.component';
 import { QuizzesComponent } from './components/quizzes/quizzes.component';
 import { ClassesComponent } from './components/classes/classes.component';
-
-
+import { ClassComponent } from './components/class/class.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component'
 const dashboardRoutes = [
   { path: 'home', component: HomeComponent },
   {
     path: 'classes',
-    component: ClassesComponent
+    component: ClassesComponent,
+    children: [
+      {
+        path: ':id',
+        component: ClassComponent
+      }
+    ]
   },
   {
     path: 'subjects',
@@ -38,10 +44,15 @@ const dashboardRoutes = [
 ]
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: 'dashboard/home', pathMatch: 'full' },
   { path: 'login', component: AuthComponent },
-  { path: 'dashboard', component: DashboardComponent,  canActivate: [authGuard], 
-    
-    children: dashboardRoutes },
+  {
+    path: 'dashboard', component: DashboardComponent, canActivate: [authGuard],
+
+    children: dashboardRoutes
+  },
+  {
+    path: '**', component: NotFoundComponent
+  }
 ];
 

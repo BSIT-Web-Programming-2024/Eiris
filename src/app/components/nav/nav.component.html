@@ -1,3 +1,6 @@
-<div class="nav-container border p-8 mb-4 cursor-pointer">
+<div class="nav-container border py-2 px-4 mb-4 cursor-pointer flex justify-between">
   <a [routerLink]="['home']">Dashboard</a>
+  <button title="logout">
+    <i (click)="logout()" class="fi fi-br-sign-out-alt"></i>
+  </button>
 </div>
