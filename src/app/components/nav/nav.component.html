@@ -1,6 +1,9 @@
-<div class="nav-container border py-2 px-4 mb-4 cursor-pointer flex justify-between">
-  <a [routerLink]="['home']">Dashboard</a>
-  <button title="logout">
-    <i (click)="logout()" class="fi fi-br-sign-out-alt"></i>
-  </button>
+<div class="border-b-2 border-gray-200 py-2 px-4 my-4  flex justify-between">
+  <a class="font-bold" [routerLink]="['home']">My Dashboard</a>
+  <div>
+    <i title="notifications" class="fi fi-rr-bell-notification-social-media text-2xl mr-6 font-bold"></i>
+    <button title="logout" class="cursor-pointer">
+      <i (click)="logout()" class="fi fi-rr-sign-out-alt text-2xl"></i>
+    </button>
+  </div>
 </div>

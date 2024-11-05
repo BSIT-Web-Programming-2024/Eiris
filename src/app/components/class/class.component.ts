@@ -13,7 +13,7 @@ import {  CommonModule } from '@angular/common';
   styleUrl: './class.component.scss'
 })
 export class ClassComponent implements OnInit {
-  studentId = 2
+  studentId = 1
   baseService = inject(BaseService)
   router = inject(Router)
   route = inject(ActivatedRoute)
@@ -49,7 +49,11 @@ export class ClassComponent implements OnInit {
    console.log('class quizzes:', this.classQuizzes)
 
 
-   await this.getMyQuizzes(this.studentId)
+   const myQuizzesData = await this.getMyQuizzes(this.studentId)
+
+   console.log('debug my quizzes data:', myQuizzesData)
+
+
     this.loading = false
   }
 

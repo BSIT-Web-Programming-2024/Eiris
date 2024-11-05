@@ -1,30 +1,36 @@
-<div class="wrapper">
-    <div class="section-left">
-     <div class="header">
-      <img class="logo" src="/dccp-logo.png" alt="Data Center College of the Philippines - Baguio City">
-      <h1 class="title">Data Center College of the Philippines - Baguio</h1>
-     </div>
-      <br><br><br><br><br><br><br><br><br><br>
-      <div class="form">
-        <h2 class="sub-title">My Portal</h2>
-        <form (submit)="login($event)">
+<div class="section-container auth-container">
+  <div class="section-container__header">
+      <img class="section-container__header__logo" src="/dccp-logo.png" alt="Data Center College of the Philippines - Baguio City">
+      <h1 class="section-container__header__title auth-title">Data Center College of the Philippines - Baguio City</h1>
+      <!-- Todo: Phase 2: Nav Links [Facebook Page, Website] -->
+  </div>
+
+<!-- Todo: Phase 2: Input Icon Prepend -->
+ <div class="flex h-full align-middle justify-center">
+  <div class="w-2/5 h-full flex flex-col align-middle justify-center">
+      <form [formGroup]="loginForm" (ngSubmit)="login($event)">
+        <fieldset class="form-fieldset">
+          <legend>My Portal</legend>
           <div class="input-section">
-            <label for="id">Email or ID</label>
-            <input type="text" class="border border-1" placeholder="ID" />
-          </div>
-          
+          <label for="email">Email</label>
+          <input type="email" id="email" class="border border-1" formControlName="email" />
+        </div>
+        
+        <div class="input-section">
+          <label for="password">Password</label>
+          <input type="password" id="password" class="border border-1" formControlName="password"/>
+        </div>
 
-          <div class="input-section">
-            <label for="password">Password</label>
-            <input type="password" class="border border-1" placeholder="Password" />
-          </div>
+        <div class="input-section">
+          <button type="submit" class="border border-1" [disabled]="!loginForm.valid">Login</button>
+        </div>
+        </fieldset>
+      </form>
+  </div>
 
-          <button type="submit" class="border border-1">Login</button>
-        </form>
-      </div>
-    </div>
-
-    <div class="section-right">
-     
-    </div>
+  <!-- Phase 2: Animate Background -->
+  <div class="w-3/5 section_container--right">
+  </div>
+ </div>
 </div>
+

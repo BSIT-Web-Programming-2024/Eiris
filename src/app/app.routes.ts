@@ -38,23 +38,21 @@ const dashboardRoutes = [
     component: ExamsComponent
   },
   {
-
     path: 'quizzes',
     component: QuizzesComponent
   },
   {
-
     path: 'attendance/:id',
     component: AttendanceComponent
   }
 ]
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'dashboard/home', pathMatch: 'full' },
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'login', component: AuthComponent },
   {
-    path: 'dashboard', component: DashboardComponent, canActivate: [authGuard],
-
+    path: 'dashboard', component: DashboardComponent, 
+    canActivate: [authGuard],
     children: dashboardRoutes
   },
   {

@@ -9,68 +9,56 @@
   font-style: normal;
 }
 
+body {
+  height: 100%;;
+  padding: 0;
+  margin: 0;
+}
+
+.eagle-lake-regular {
+  font-family: "Eagle Lake", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+// .noto-sans-<uniquifier> {
+//   font-family: "Noto Sans", sans-serif;
+//   font-optical-sizing: auto;
+//   font-weight: <weight>;
+//   font-style: normal;
+//   font-variation-settings:
+//     "wdth" 100;
+// }
+
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+// .lexend-exa-<uniquifier> {
+//   font-family: "Lexend Exa", serif;
+//   font-optical-sizing: auto;
+//   font-weight: <weight>;
+//   font-style: normal;
+// }
+
 .card {
   width: 280px;
   height: 280px;
   border: 1px solid black;
 }
 
-.chakra-petch-light {
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 300;
-  font-style: normal;
+.card-a {
+  border-radius: 8px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  // background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+  // color: #fff;
 }
 
-.chakra-petch-regular {
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.chakra-petch-medium {
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.chakra-petch-semibold {
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.chakra-petch-bold {
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.chakra-petch-light-italic {
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.chakra-petch-regular-italic {
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.chakra-petch-medium-italic {
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.chakra-petch-semibold-italic {
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.chakra-petch-bold-italic {
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 700;
-  font-style: italic;
+// Default
+.section-container_header_logo {
+  height: 80px;
+  width: 80px;
 }

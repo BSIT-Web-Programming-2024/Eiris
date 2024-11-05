@@ -3,43 +3,56 @@
 }
 @else {
 
+<div class="section-description">
+  <h1 class="text-l">Subject : {{ classDetails.subject.name}}</h1>
+  <h1>Schedule: {{classDetails.schedule}}</h1>
+  <h1>Room: {{classDetails.room}}</h1>
+  <h1>Teacher: {{classDetails.teacher.firstname}} {{classDetails.teacher.lastname}}</h1>
+</div>
 
-<h1 class="text-l">Subject : {{ classDetails.subject.name}}</h1>
-<h1>Schedule: {{classDetails.schedule}}</h1>
-<h1>Room: {{classDetails.room}}</h1>
-<h1>Teacher: {{classDetails.teacher.firstname}} {{classDetails.teacher.lastname}}</h1>
+<br><br><br>
+<h1 class="text-green-500 text-3xl font-bold">Prelims</h1>
+<div class="period mt-4">
 
-<div class="period  mt-4 border p-4 rounded-lg">
-  <h1 class="text-orange-500">Preliminary</h1>
-  <div class="class_standings  mt-10 border p-8">
-    <h1>Class Standings</h1>
-   
-  
-    <div class="quizzes mt-6 border-2 p-6">
+  <div class="class_standings  mt-10 rounded-lg shadow-2">
+    <h1 class="text-gray-700 font-bold">Class Standings</h1>
+    <div class="quizzes mt-6 border-2 p-6 rounded">
       <h2>Quizzes - {{ classQuizzes.length }}</h2>
       @for(classQuiz of classQuizzes; track classQuiz) {
-        <div class="quizzes-card ">
-          <h3> {{ classQuiz.quizzes.name }}</h3>
-          <div class="flex justify-between">
-            <p>My Score: </p>
-            <p class="font-bold">Total Score: {{ classQuiz.total_score }}</p>
-          </div>
+      <div class="quizzes-card ">
+        <h3> {{ classQuiz.quizzes.name }}</h3>
+        <div class="flex justify-between">
+          <p>My Score: </p>
+          <p class="font-bold">Total Score: {{ classQuiz.total_score }}</p>
         </div>
+      </div>
       }
     </div>
   </div>
-  <div class="exam mt-10 border p-8">
-    <h1>My Exam</h1>
+
+
+  <div class="exam mt-12">
+    <h1 class="text-gray-700 font-bold">My Exams</h1>
+    <div class="quizzes mt-6 border-2 p-6 rounded">
+      <h2>Title - Prelim Software Architecture Exam</h2>
+      
+      <div class="score flex justify-between mt-3">
+        <h1>My Score: <span class="text-green-500">45</span></h1>
+        <h1>Total Score: <span>50</span></h1>
+      </div>
+
+      <div class="score-average mt-8">
+        <h1>Exam Average: 90%</h1>
+      </div>
+      
+    </div>
   </div>
-  
-  <div class="grade mt-10 border p-8">
-    <h1>My Grade</h1>
+
+  <div class="exam mt-12">
+    <h1 class="text-gray-700 font-bold">Grade</h1>
+    <h1 class="text-4xl mt-4 text-blue-900">90 %</h1>
   </div>
+
+ 
 </div>
 }
-
-
-
-
-
-

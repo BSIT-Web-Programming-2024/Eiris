@@ -1,3 +1,21 @@
 :host {
   font-weight: 500;
+
+  .section-description {
+    background: #000428;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #004e92, #000428);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #004e92, #000428);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    padding: 24px;
+    color: #e4e6ec;
+    border-radius: 18px;
+    font-size: 16px;
+
+    h1 {
+      margin: 10px 0;
+    }
+  }
 }

@@ -1,15 +1,85 @@
 :host {
   font-family: "Lexend Exa", sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   font-style: normal;
   font-size: 18px;
   line-height: 2rem;
 
-
   .classes {
     border-radius: 5px;
-    border: 1px solid #cacaca;
-    padding: 10px;
+  }
+
+  .action-icon {
+    font-size: 24px;
+    font-weight: bolder;
+    text-shadow: 3px;
+  }
+
+  .dashboard-summary {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 32px;
+
+
+    .dashboard-card {
+      background: rgb(25, 193, 140);
+      color: #083160;
+      height: 180px;
+      width: 320px;
+      margin: 18px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 32px;
+      font-size: 24px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+      background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+      
+      display: flex;
+      justify-content: space-between;
+      line-height: 32px;
+      font-weight: bolder;
+
+      padding: 36px;
+
+      .card-icon {
+        font-size: 48px;
+      }
+    }
+
+    .dashboard-card-a {
+      background-image: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%);
+    }
+
+    .dashboard-card-b {
+      background-image: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%);
+    }
+
+    .dashboard-card-c {
+      background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+    }
+
+    .dashboard-card-d {
+      background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+    }
+
+  
   }
 }
 
+.sea-lord-bg {
+  background-image: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%) !important;
+}
+
+.forest-pink-bg {
+  background-image: linear-gradient(to top, #df89b5 0%, #bfd9fe 100%) !important;
+}
+
+.lemon-green-bg {
+  background-image: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%) !important;   
+}
+
+.japan-blush-bg {
+  background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%) !important;
+}

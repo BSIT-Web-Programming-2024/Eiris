@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import  { AuthService } from '../../core/services/auth.service';
 
 @Component({
@@ -10,11 +10,11 @@ import  { AuthService } from '../../core/services/auth.service';
   styleUrl: './nav.component.scss'
 })
 export class NavComponent {
-
   authService = inject(AuthService)
+  router = inject(Router)
 
-  logout() {
-    this.authService.signOut()
-    console.log('redirect to login')  
+  async logout() {
+    await this.authService.signOut()
+    this.router.navigate(['/login'])
   }
 }
