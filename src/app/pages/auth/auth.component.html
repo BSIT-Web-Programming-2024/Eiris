@@ -1,9 +1,30 @@
 <div class="wrapper">
-  <div class="form">
-    <form (submit)="login($event)">
-      <input type="text" class="border border-1" placeholder="ID" />
-      <input type="password" class="border border-1" placeholder="Password" />
-      <button type="submit" class="border border-1">Login</button>
-    </form>
-  </div>
+    <div class="section-left">
+     <div class="header">
+      <img class="logo" src="/dccp-logo.png" alt="Data Center College of the Philippines - Baguio City">
+      <h1 class="title">Data Center College of the Philippines - Baguio</h1>
+     </div>
+      <br><br><br><br><br><br><br><br><br><br>
+      <div class="form">
+        <h2 class="sub-title">My Portal</h2>
+        <form (submit)="login($event)">
+          <div class="input-section">
+            <label for="id">Email or ID</label>
+            <input type="text" class="border border-1" placeholder="ID" />
+          </div>
+          
+
+          <div class="input-section">
+            <label for="password">Password</label>
+            <input type="password" class="border border-1" placeholder="Password" />
+          </div>
+
+          <button type="submit" class="border border-1">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="section-right">
+     
+    </div>
 </div>

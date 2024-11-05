@@ -13,7 +13,7 @@ import {  CommonModule } from '@angular/common';
   styleUrl: './class.component.scss'
 })
 export class ClassComponent implements OnInit {
-  studentId = 1
+  studentId = 2
   baseService = inject(BaseService)
   router = inject(Router)
   route = inject(ActivatedRoute)

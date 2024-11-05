@@ -6,7 +6,7 @@ import { createClient } from '@supabase/supabase-js'
   providedIn: 'root'
 })
 export class BaseService {
-  student_id = 1
+  student_id = 71
   supabase = createClient(environment.supabaseUrl, environment.supabaseKey)
 
   constructor() { }
