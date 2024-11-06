@@ -9,11 +9,11 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class AuthService {
   private router = inject(Router)
-  private currentUser: BehaviorSubject<User | boolean> = new BehaviorSubject<User | boolean>(false)
+  private currentUser: BehaviorSubject<User | null> = new BehaviorSubject<User | null>(null)
 
   constructor() {
     supabase.auth.onAuthStateChange((event, session) => {
-      this.currentUser.next(session?.user ?? false)
+      this.currentUser.next(session?.user ?? null)
     })
   }
 
@@ -34,7 +34,7 @@ export class AuthService {
     if (user.data.user) {
       this.currentUser.next(user.data.user)
     } else {
-      this.currentUser.next(false)
+      this.currentUser.next(null)
     }
   }
 
@@ -44,7 +44,7 @@ export class AuthService {
   }
 
 
-  getCurrentUser(): Observable<User | boolean> {
+  getCurrentUser(): Observable<User | null> {
     return this.currentUser.asObservable()
   }
 

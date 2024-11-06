@@ -11,8 +11,9 @@ import { ClassesComponent } from './components/classes/classes.component';
 import { ClassComponent } from './components/class/class.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component'
 import { AttendanceComponent } from './pages/attendance/attendance.component';
+
 const dashboardRoutes = [
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   {
     path: 'classes',
     component: ClassesComponent,
@@ -51,9 +52,10 @@ export const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'login', component: AuthComponent },
   {
-    path: 'dashboard', component: DashboardComponent, 
-    canActivate: [authGuard],
-    children: dashboardRoutes
+    path: 'dashboard',
+    component: DashboardComponent,
+    children: dashboardRoutes,
+    canActivate: [authGuard]
   },
   {
     path: '**', component: NotFoundComponent
