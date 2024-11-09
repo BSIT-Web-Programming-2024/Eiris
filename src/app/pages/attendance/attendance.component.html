@@ -1,0 +1,28 @@
+<div class="class-container">
+    <h1>Class</h1>
+</div>
+
+<div class="class-students">
+    <h1 class="font-bold text-blue-500">Students</h1>
+
+    @for (student of classStudents; track $index) {
+        <div class="student-info flex justify-around">
+            <p> {{$index + 1}}. </p>
+            <p> {{student.users.id}}</p>
+            <p> {{student.users.lastname }} , {{student.users.firstname }}</p>
+            <p> {{student.users.email}}</p>
+            <p></p>
+        </div>
+        
+
+    }
+</div>
+<!-- todo
+ 
+ 1. get class
+ 2. get class_enrolees
+ 3. get student name
+ 4. date today
+ 5. present / absent
+-->
+

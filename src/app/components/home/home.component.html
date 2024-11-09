@@ -1,7 +1,47 @@
-<div class="flex mt-8">
-  @for(section of sections; track  section) {
-    <a [routerLink]="['/dashboard', section.link]" class="card mx-2">
-      <h1>My {{section.title}}</h1>
-    </a>
-}
+<div class="dashboard-summary">
+  <div class="dashboard-card sea-lord-bg">
+    <h1>Subjects</h1>
+    <div class="card-icon">
+      <i class="fi fi-bs-chart-histogram"></i>
+    </div>
+  </div>
+
+  <div class="dashboard-card  lemon-green-bg">
+    <h1>Quizzes</h1>
+    <div class="card-icon">
+      <i class="fi fi-rr-scroll-document-story"></i>
+    </div>
+  </div>
+
+  <div class="dashboard-card forest-pink-bg">
+    <h1>Exams</h1>
+
+    <div class="card-icon">
+      <i class="fi fi-rr-file-signature"></i>
+    </div>
+  </div>
+
+  <div class="dashboard-card japan-blush-bg">
+    <h1>Notifs</h1>
+
+    <div class="card-icon">
+      <i class="fi fi-bs-megaphone"></i>
+    </div>
+  </div>
+
+</div>
+
+<br><br><br><br><br>
+<div class="section-header flex justify-between align-center">
+  <h1 class="text-3xl text-blue-600 font-bold"> My Subjects</h1>
+  <p>Period - <span class="text-green-500">Prelims</span></p>
+</div>
+
+<div class="classes mt-8">
+  @for(class of classes; track class) {
+  <div class=" card-a my-8 p-3 flex justify-between font-600 cursor-pointer">
+    <h1>{{ class.classes.subject.name }}</h1>
+    <a [routerLink]="['/dashboard/classes', class.classes.id]"> <i class="fi fi-tr-overview action-icon"></i></a>
+  </div>
+  }
 </div>

@@ -1,0 +1,42 @@
+.action-control {
+  position: fixed;
+  bottom: 0;
+  height: 120px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgb(237, 239, 241);
+  color: rgb(76, 76, 96);
+
+  .active {
+    background: #A7CFDF;
+    background: linear-gradient(to right, hsl(225, 94%, 59%) 0%, #bd14ac 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    padding: 12px;
+    margin: 12px 10px;
+    height: 90%;
+    width: 80px;
+    cursor: pointer;
+
+    &__icon {
+      font-size: 32px;
+      text-shadow: rgba(0, 0, 0, 0.45) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+
+    &__label {
+      font-size: 8px;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { environment } from '../../../environments/environment.development';
+import { environment } from '../../../environments/environment';
 import { createClient } from '@supabase/supabase-js'
 
 @Injectable({
@@ -19,12 +19,10 @@ export class BaseService {
     return data
   }
 
-  async getMyClases() {
+  async getMyClasses() {
     const { data, error } = await this.supabase.from('class_enrollees').select('* , classes( id , subject(name)) ').eq('student_id', this.student_id)
-
     return data
   }
-
 
   async getMyExams() {
     const { data, error } = await this.supabase

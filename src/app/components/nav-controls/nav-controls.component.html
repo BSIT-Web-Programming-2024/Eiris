@@ -1,0 +1,9 @@
+
+<div class="action-control">
+  @for (section of sections; track $index) {
+    <div class="action-control__section " [routerLink]="'/dashboard/' + section.url">
+      <i class="{{ section.icon }} text-3xl action-control__section__icon"></i>
+      <p class="text-sm action-control__section__label">{{ section.title }}</p>
+    </div>
+  }
+</div>

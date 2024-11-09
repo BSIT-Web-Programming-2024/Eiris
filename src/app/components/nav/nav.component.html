@@ -1,3 +1,13 @@
-<div class="nav-container border p-8 mb-4 cursor-pointer">
-  <a [routerLink]="['home']">Dashboard</a>
+<div class="border-b-2 border-gray-200 py-2 px-4 my-4  flex justify-between items-center">
+  <a class="font-bold" [routerLink]="['home']">My Portal</a>
+  <div>
+
+    <div class="flex items-center">
+      <i title="notifications" class="fi fi-br-bell-notification-social-media text-3xl mr-6 cursor-pointer"></i>
+      <img class="w-14 h-14 rounded-full shadow-sm p-0 cursor-pointer" src="https://cdn.tuk.dev/assets/components/todos/profile.png" alt="profile" srcset="" />
+      <!-- <button title="logout" class="cursor-pointer">
+        <i (click)="logout()" class="fi fi-rr-sign-out-alt text-3xl"></i>
+      </button> -->
+    </div>
+  </div>
 </div>
